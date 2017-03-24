@@ -1,7 +1,10 @@
 package br.hcb.refatoracao.cap6;
 
+import static br.hcb.refatoracao.cap6.MoedaEnum.*;
+
 public class Fatura {
 
+	//private static final double VALOR_DOLAR = 2.7;
 	private double valorMensal;
 	private String cliente;
 
@@ -25,7 +28,13 @@ public class Fatura {
 	}
 
 	public double emDolar() {
-		return valorMensal * 2.7;
+		//valor magico
+		//usado em outros lugares
+		//repeticao
+		//return valorMensal * 2.7;
+		//return valorMensal * VALOR_DOLAR;
+		//return valorMensal * MoedaEnum.DOLAR.getTaxa();
+		return valorMensal * DOLAR.getTaxa();
 	}
 
 }
